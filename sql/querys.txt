@@ -1,0 +1,2 @@
+UPDATE ccaa_ingresos_unives_2012
+SET _median_income= (Round((porcentaje_ingresos)::numeric,2))
