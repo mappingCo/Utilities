@@ -3,7 +3,7 @@ INSTALL RUBY ON RAILS ON LINUX
 
 (taken from the Web Application Architectures [Coursera](https://www.coursera.org/course/webapplications)) mooc
 
-#Install Dependencies
+### Install Dependencies
 
 Install build essentials by opening up a terminal window and typing the following command:
 
@@ -24,7 +24,7 @@ sudo apt-get install git-core
 ```
 
 
-#Installing RVM
+### Installing RVM
 
 RVM stands for Ruby Version Manager and allows you to install multiple versions of Ruby and switch between them easily. Even if you are only going to use one version, it's probably the simplest way to install Ruby.
 
@@ -45,7 +45,7 @@ Finally, restart your bash session by closing and then reopening your terminal w
 
 
 
-#Using RVM
+### Using RVM
 
 You can get a list of Ruby versions by running the following command in your terminal window:
 
