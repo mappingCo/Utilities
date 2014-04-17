@@ -1,16 +1,18 @@
-## install heroku toolbelt (which includes the Heroku command line client, Git, and Foreman.)
+# Deploying a NodeJS/express App to Heroku
+
+### install heroku toolbelt (which includes the Heroku command line client, Git, and Foreman.)
 $ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
-## login on heroku
+### login on heroku
 $ heroku login
 
-## create a heroku SSH keys:
+### create a heroku SSH keys:
 $ ssh-keygen -t rsa
 
 ### add the key to Heroku:
 $ heroku keys:add
 
-## create the app
+### create the app
 $ mkdir getcont
 $ cd getcont
 
@@ -34,8 +36,9 @@ $ subl package.json
 ### create node_modules
 $ npm install
 
-### create Procfile file with this line:
-web: node app.js
+### create Procfile file 
+include this line:
+* web: node app.js
 
 ### create app.js
 
