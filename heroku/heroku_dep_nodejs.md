@@ -1,6 +1,7 @@
 # Deploying a NodeJS/express App to Heroku
 
-### install heroku toolbelt (which includes the Heroku command line client, Git, and Foreman.)
+### install heroku toolbelt 
+(which includes the Heroku command line client, Git, and Foreman.)
 $ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
 ### login on heroku
@@ -36,8 +37,8 @@ $ subl package.json
 ### create node_modules
 $ npm install
 
-### create Procfile file 
-include this line:
+### Declare process types with a Procfile so that it can run with Foreman:
+create a Procfile file and include this line:
 * web: node app.js
 
 ### create app.js
