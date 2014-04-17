@@ -89,3 +89,28 @@ $ heroku ps:scale web=2
 
 ### stop running a process
 $ heroku ps:scale worker=0
+
+### adding MongoDB add-on
+$ heroku addons:add mongohq
+
+$ npm install mongodb --save
+
+### add mongoDB require
+
+```javascript
+var mongo = require('mongodb');
+
+var mongoUri = process.env.MONGOLAB_URI ||
+  process.env.MONGOHQ_URL ||
+  'mongodb://localhost/mydb';
+
+mongo.Db.connect(mongoUri, function (err, db) {
+  db.collection('mydocs', function(er, collection) {
+    collection.insert({'mykey': 'myvalue'}, {safe: true}, function(er,rs) {
+    });
+  });
+});
+```
+### Git Cloning Existing Heroku Applications
+$ heroku git:clone -a myapp
+
