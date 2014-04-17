@@ -1,10 +1,13 @@
-# install Java Developer Kit (JDK)
+# Install PhoneGap on linuxMint
+
+
+## install Java Developer Kit (JDK)
 
 ```
 sudo apt-get install openjdk-6-jdk
 ```
 
-set Java-6 to be the default version
+set Java-6 to be the default version:
 
 ```
 sudo update-alternatives --config java
@@ -12,10 +15,13 @@ sudo update-alternatives --config java
 
 type selecction number 1 ( /usr/lib/jvm/java-6-openjdk-i386/jre/bin/java)
 
+export JAVA_HOME=/usr/lib/java-6-openjdk-i386
+export PATH=\${PATH}:\${JAVA_HOME}/bin
+
 ### check
 java -version
 
-# download eclipse linux32.
+## download eclipse linux32.
 
 ```
 cd ~/Downloads
@@ -24,7 +30,7 @@ cd /usr/local
 ```
 
 
-## give permisions on executable file
+### give permisions on executable file
 ```
 sudo -s chmod a+x eclipse-standard-kepler-SR2-linux-gtk.tar.gz
 sudo -s tar xvzf eclipse-standard-kepler-SR2-linux-gtk.tar.gz
@@ -37,6 +43,13 @@ exit
 cd /home/sigon/Desktop
 ln -s /usr/local/eclipse/eclipse
 ```
+Run the following (and put in .profile):
+$ export PATH=/usr/local/eclipse:$PATH
+
+
+sudo -s subl /etc/profile
+export PATH=/usr/local/eclipse:$PATH
+
 
 # download the Android SDK for linux
 
@@ -44,16 +57,16 @@ ln -s /usr/local/eclipse/eclipse
 cd ~/Downloads/
 ```
 
-## copy android sdk to /opt
+### copy android sdk to /opt
 ```
 sudo -s cp -r android-sdk_r22.6.2-linux.tgz /opt
 ```
 
-## unzip
+### unzip
 cd /opt
 sudo -s tar xvzf android-sdk_r22.6.2-linux.tgz
 
-## change permisions
+### change permisions
 
 ```
 sudo -s chmod -R 755 /opt/android-sdk-linux
@@ -61,19 +74,19 @@ sudo -s chmod -R 755 /opt/android-sdk-linux
 sudo -s subl /etc/profile
 ```
 
-## add this lines in the end
+### add this lines in the end
 export PATH=${PATH}:/opt/android-sdk-linux/tools
 export PATH=${PATH}:/opt/android-sdk-linux/platform-tools
 
 puede que en linux mint haya que escribirlo en subl ~/.bashrc
 exit terminal
-## open new terminal to aply changes
+### open new terminal to aply changes
 
 ```
 . /etc/profile
 ```
 
-# install ADT plugin 
+## install ADT plugin 
 * go to /usr/local/eclipse and double click on the eclipse.exe
 * Start Eclipse, then select Help > Install New Software
 * Click Add, in the top-right corner.
@@ -85,7 +98,7 @@ In the Add Repository dialog that appears, enter "ADT Plugin" for the Name and t
 If you get a security warning saying that the authenticity or validity of the software can't be established, click OK.
 * When the installation completes, restart Eclipse
 
-# Configure the ADT Plugin
+## Configure the ADT Plugin
 
 * alert: location of the android SDK has not been setup in the preferences
 
@@ -97,7 +110,7 @@ existing location: /opt/android-sdk-linux
 * Click Next.
 * Your Eclipse IDE is now set up to develop Android apps, but you need to add the latest SDK platform tools and an Android platform to your environment. To get these packages for your SDK, continue to Adding Platforms and Packages.
 
-## download and install: android sdk build-tools, sdk platform-tools..
+### download and install: android sdk build-tools, sdk platform-tools..
 in eclipse go to window/Android SDK y AVD Manager->Paquetes instalados y haz clic en “Actualizar todo
 
 ```
@@ -108,7 +121,7 @@ sudo -s
 
 it will open the android SDK manager, select packages and install
 
-# create Android Virtual Device [http://developer.android.com/tools/devices/managing-avds.html]
+## create Android Virtual Device [http://developer.android.com/tools/devices/managing-avds.html]
 
 * go to /usr/local/eclipse and double click on the eclipse.exe
 * on window > Android virtual device Manager > New
@@ -118,7 +131,7 @@ it will open the android SDK manager, select packages and install
 Ahora desplázate hacia abajo en el cuadro que dice “Skin” y haz clic en “Resolución”, introduce los siguientes números 420x580 y selecciona Crear AVD, esto creará un AVD (emulador) para el programa de prueba
 
 
-# install nodeJS
+## install nodeJS
 
 ```
 sudo apt-get install nodejs
@@ -133,29 +146,31 @@ v0.10.21
 sudo ln -s /usr/bin/nodejs /usr/bin/node
 sudo apt-get install npm
 
-# install ant
+## install ant
 
 ```
 sudo apt-get install ant
 ```
 
-# install phonegap
+## install phonegap
 ```
 sudo npm install -g phonegap
 ```
 
-# create a proyect 
+## create a proyect 
 By default, the phonegap create script generates a skeletal web-based application
 
 ```
 phonegap create myApp com.mappingandco.myApp myApp
 cd myApp
-phonegap run android
+phonegap run android # compile on the cloud
+phonegap local run android # compile on local
 ```
 
 or 
 
 In a terminal window, navigate to the bin directory within the android subfolder of the Cordova distribution.
+$ cd /usr/local/phonegap/lib/android/bin/
 Type in ./create <project_folder_path> <package_name> <project_name> then press "Enter"
 
 <project_folder_path> is the path to your new Cordova Android project
@@ -175,6 +190,10 @@ Type in ./create <project_folder_path> <package_name> <project_name> then press 
 
 
 http://es.wikihow.com/instalar-Android-en-Ubuntu-Linux-con-Eclipse-IDE
+
+http://julianhigman.com/blog/2013/10/17/notes-on-setting-up-phonegap-on-ubuntu-for-android-app-development/
+
+http://yaizabailen.com/setting-up-an-android-app-build-environment-with-android-sdk-and-phonegap-in-ubuntu-13-04/
 
 http://visuallybs.com/blog/0112/09/11/developing-with-phonegap/
 
