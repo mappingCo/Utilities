@@ -14,7 +14,7 @@ $ ssh-keygen -t rsa
 ### add the key to Heroku:
 $ heroku keys:add
 
-### create the app
+### create the app directory
 $ mkdir getcont
 
 $ cd getcont
@@ -40,10 +40,14 @@ $ subl package.json
 $ npm install
 
 ### Declare process types with a Procfile so that it can run with Foreman:
-create a Procfile file and include this line:
+$ subl Procfile
+
+```
 * web: node app.js
+```
 
 ### create app.js
+$ subl app.js
 
 ```javascript
 var express = require("express");
