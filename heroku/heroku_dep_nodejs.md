@@ -16,6 +16,7 @@ $ heroku keys:add
 
 ### create the app
 $ mkdir getcont
+
 $ cd getcont
 
 ### create package.json
@@ -65,7 +66,9 @@ $ nodejs app.js
 
 ### init a git repo
 $ git init
+
 $ git add .
+
 $ git commit -m "Initial commit"
 
 ### Create a Heroku app:
