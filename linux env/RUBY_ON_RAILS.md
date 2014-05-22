@@ -89,3 +89,34 @@ rails -v
 
 (This will check the current installed version of Rails, which should be 4.0 or later)
 
+
+A litte bit of rails
+======================
+
+* Open console: $ irb
+* Open rails console (dev env): $ rails c
+* Start the server: $ rails s
+
+* string interpolation:
+
+```
+name = "James Kirk", starship = "USS Enterprise"
+"The captain of the #{starship} is #{name}"
+```
+
+### variables
+
+* "var" 	Local variable
+* "@var" 	Instance variable
+* "@@var" 	Class variable
+* "$var" 	Global variable
+
+* hash (associative arrays)
+
+```
+ h = {:fname => "John", :lname => "Doe"}
+ h[:fname]
+ "John"
+ ```
+
+
