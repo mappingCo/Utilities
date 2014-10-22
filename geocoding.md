@@ -9,3 +9,6 @@ https://developers.google.com/maps/documentation/geocoding/?hl=es
 * geocoder.us (US address)
 http://geocoder.us/
 
+* reverse geocoding
+http://www.findlatitudeandlongitude.com/find-address-from-latitude-and-longitude/#.U830YPl_utI
+
