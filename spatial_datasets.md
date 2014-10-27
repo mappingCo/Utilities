@@ -15,3 +15,7 @@ http://geo.ices.dk/download.php?dataset=ices_ref:ices_areas
 ## Catalog of Open Data Portals:
 
 http://www.opengeocode.org/opendata/
+
+##  global coverage of soils grid at 1km ground resolution
+
+http://soilgrids.org/
