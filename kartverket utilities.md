@@ -1,11 +1,26 @@
-kartverket utilities
+# kartverket utilities
 
 * donwload
 http://data.kartverket.no/download/content/geodataprodukter?korttype=3594&aktualitet=All&datastruktur=All&dataskema=All
 
-* convert SOSI to shape
+* Sosicon: convert SOSI to shape
 http://sosicon.espenandersen.no/
 ./sosicon -2shp sourcefile.sos
+
+* sosicon: Filter by OBJTYPE
+
+./sosicon -2shp -t "Skog, Park" Arealdekke.sos
+
+* sosicon: Filter by geometry
+
+	* KURVE (curve/polyline)
+	* FLATE (surface/polygon)
+	* PUNKT (point)
+
+./sosicon -2shp -g FLATE Arealdekke.sos
+
+* gdal-sosi: https://trac.osgeo.org/gdal/wiki/SOSI
+* sosi to osm: sosi2osm -> sudo apt-get install sosi2osm
 
 * WMS list
 http://status.kartverket.no/tjenester/openwms.py?_ga=1.47413287.1295584220.1436958326
