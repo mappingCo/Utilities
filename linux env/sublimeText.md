@@ -6,6 +6,14 @@ sudo apt-get update
 sudo apt-get install sublime-text
 ```
 
+## Install Sublime Text 3 on ubuntu 15.04
+
+```
+$ sudo add-apt-repository ppa:webupd8team/sublime-text-3
+$ sudo apt-get update
+$ sudo apt-get install sublime-text-installer
+```
+
 ## Essential Sublime Text Packages
 
 # Install Package Control:
