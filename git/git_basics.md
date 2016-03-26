@@ -51,6 +51,7 @@ Rename author
 https://help.github.com/articles/changing-author-info/
 
 ```
+$ chmod a+x rename_author.sh
 $ ./rename_author.sh
 $ git push --force --tags origin 'refs/heads/*'
 ```
