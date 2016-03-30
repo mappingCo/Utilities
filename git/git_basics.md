@@ -1,15 +1,37 @@
 # git basics
 
+### add credential cache
+
+git-credential-cache - Helper to temporarily store passwords in memory and avoid enter user and password for 8 hours
+
+https://git-scm.com/docs/git-credential-cache
+
+```
+git config --global credential.helper 'cache --timeout=28800'
+
+```
+
+### add
+
+```
+$ git add -A # stages All
+$ git add . # stages new and modified, without deleted
+$ git add -u # stages modified and deleted, without new
+$ git add -p # review the difference before adding modified contents to the index
+
+```
+
 ### Viewing the Commit History
 
 Specify your own log output format:
 
 ```
-$ git log --pretty=format:"%h - %an, %ar : %s"
-ca82a6d - Scott Chacon, 6 years ago : changed the version number
+$ git log --pretty=format:"%h - %an, %ar : %s %d"
+ca82a6d - Scott Chacon, 6 years ago : changed the version number (HEAD, tag: v0.1.0, origin/master, origin/HEAD, master)
 085bb3b - Scott Chacon, 6 years ago : removed unnecessary test
 a11bef0 - Scott Chacon, 6 years ago : first commit
 ```
+
 
 ### Creating a tag
 
