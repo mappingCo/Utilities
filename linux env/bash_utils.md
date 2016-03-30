@@ -24,7 +24,8 @@ f, --force
 -v, --verbose
     explain what is being done
 ```
-### chmod 
+
+### chmod
 
 PERMISSION      COMMAND EXAMPLE   
 
