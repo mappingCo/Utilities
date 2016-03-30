@@ -26,11 +26,28 @@ $ git add -p # review the difference before adding modified contents to the inde
 Specify your own log output format:
 
 ```
-$ git log --pretty=format:"%h - %an, %ar : %s %d"
+$ git log --pretty=format:"%h - %an, (%ar) : %s %d"
 ca82a6d - Scott Chacon, 6 years ago : changed the version number (HEAD, tag: v0.1.0, origin/master, origin/HEAD, master)
 085bb3b - Scott Chacon, 6 years ago : removed unnecessary test
 a11bef0 - Scott Chacon, 6 years ago : first commit
+
+# same log with colors:
+$ git log --pretty=format:"%C(bold blue)%h%C(reset) - %C(bold white)%an%C(reset), %C(bold green)%ar%C(reset) : %s %C(bold yellow)%d%C(reset)"
 ```
+
+put this on an alias to avoid typing long command
+
+```
+git config --global alias.lg 'log --pretty=format:"%C(bold blue)%h%C(reset) - %C(bold white)%an%C(reset), %C(bold green)%ar%C(reset) : %s %C(bold yellow)%d%C(reset)"'
+
+# now just type
+$ git lg
+```
+[alias]
+
+	# List contributors with number of commits
+	contributors = shortlog --summary --numbered
+	lg = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
 
 
 ### Creating a tag
