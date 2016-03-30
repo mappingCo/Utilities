@@ -55,6 +55,13 @@ testing tags
 v0.2.0-1-g91f56aa
 ```
 
+### pushing tags to github
+
+By default, the git push command doesn’t transfer tags to remote servers. You will have to explicitly push tags to a shared server.
+
+```
+$ git push origin v0.2.0
+```
 
 ### author
 
