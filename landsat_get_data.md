@@ -1,4 +1,12 @@
-#  Accessing Landsat Data on AWS
+## libra
+
+Libra is a browser for open Landsat 8 satellite imagery. Use it to browse, filter, sort, and download images.
+
+Each circle on the map represents the number of available images at that location. Filters at the top of the map can be used to select a new date range, cloud cover percentage, and sun azimuth angle.
+
+http://libra.developmentseed.org/
+
+##  Accessing Landsat Data on AWS
 
 The data are organized using a directory structure based on each scene’s path and row. For instance, the files for Landsat scene LC81390452014295LGN00 are available in the following location: s3://landsat-pds/L8/139/045/LC81390452014295LGN00/
 
